@@ -14,7 +14,23 @@ class Solution {
         return nums.reduce(0, {$0 ^ $1})
     }
 }
-// This cost O(n) time
+// This costs O(n) time
+```
+  
+## C  
+```c
+//1. same two numbers operate XOR can return 0
+//2. 0 and number which is not zero operate XOR can return this number self
+
+ int singleNumber(int* nums, int numsSize) {
+      int returnValue = 0;
+    while (numsSize > 0) {
+        returnValue ^= *nums;
+        nums++;numsSize--;
+    }
+    return returnValue;
+}
+    //cost O(n) time
 ```
 
 
